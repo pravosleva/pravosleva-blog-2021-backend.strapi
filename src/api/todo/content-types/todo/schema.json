@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todos",
+  "info": {
+    "singularName": "todo",
+    "pluralName": "todos",
+    "displayName": "todo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 300
+    },
+    "priority": {
+      "type": "integer",
+      "min": 1,
+      "max": 5,
+      "required": true
+    },
+    "tg_chat_id": {
+      "type": "biginteger",
+      "required": true
+    },
+    "namespace": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200,
+      "minLength": 3
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "no-status",
+        "info",
+        "warning",
+        "danger",
+        "success",
+        "is-done"
+      ],
+      "default": "no-status"
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 1000
+    }
+  }
+}
