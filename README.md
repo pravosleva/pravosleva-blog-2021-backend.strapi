@@ -1,3 +1,46 @@
+# pravosleva.pro/strapi
+
+## NGINX
+
+`/etc/hginx/conf.d/00-upstreams.conf`
+```bash
+upstream strapi {
+  server 127.0.0.1:1337 fail_timeout=0 max_fails=0;
+}
+```
+
+`/etc/hginx/conf.d/50-pravosleva.pro.conf`
+```bash
+server {
+  # ...
+
+  # strapi@4.x
+  location /strapi/ {
+    proxy_pass http://strapi/;
+  }
+  location ~ ^/(admin|i18n|api|content-manager|upload|content-type-builder|documentation|strapi-google-auth|plugins)/ {
+    proxy_pass http://strapi;
+  }
+}
+```
+
+## Strapi
+
+`./config/server.js`
+```js
+module.exports = ({ env }) => ({
+  url: 'https://pravosleva.pro/strapi',
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', 1337),
+  app: {
+    keys: env.array('APP_KEYS'),
+  },
+  webhooks: {
+    populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
+  },
+});
+```
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
