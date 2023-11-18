@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-  url: 'https://pravosleva.pro/api',
+  url: 'https://pravosleva.pro/strapi',
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
   app: {
