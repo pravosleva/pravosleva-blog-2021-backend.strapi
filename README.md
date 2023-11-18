@@ -1,15 +1,15 @@
-# pravosleva.pro/strapi
+# 🧪 pravosleva.pro/strapi
 
 ## NGINX
 
-`/etc/hginx/conf.d/00-upstreams.conf`
+`/etc/nginx/conf.d/00-upstreams.conf`
 ```bash
 upstream strapi {
   server 127.0.0.1:1337 fail_timeout=0 max_fails=0;
 }
 ```
 
-`/etc/hginx/conf.d/50-pravosleva.pro.conf`
+`/etc/nginx/conf.d/50-pravosleva.pro.conf`
 ```bash
 server {
   # ...
