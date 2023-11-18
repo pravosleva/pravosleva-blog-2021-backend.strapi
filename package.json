@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "strapi develop",
     "start:prod": "NODE_ENV=production strapi start",
-    "start:pm2": "pm2 start:prod yarn --name strapi-1377-prod -- start",
+    "start:pm2": "pm2 start yarn --name strapi-1377-prod -- start:prod",
     "build": "strapi build",
     "strapi": "strapi"
   },
