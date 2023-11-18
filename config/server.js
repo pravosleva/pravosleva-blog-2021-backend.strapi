@@ -1,4 +1,5 @@
 module.exports = ({ env }) => ({
+  url: 'https://pravosleva.pro/api',
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
   app: {
