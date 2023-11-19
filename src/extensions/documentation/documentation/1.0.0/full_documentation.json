@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-11-18T22:22:28.518Z"
+    "x-generation-date": "2023-11-19T22:49:14.596Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -97,7 +97,8 @@
               "label",
               "priority",
               "tg_chat_id",
-              "namespace"
+              "namespace",
+              "status"
             ],
             "type": "object",
             "properties": {
@@ -118,12 +119,12 @@
               "status": {
                 "type": "string",
                 "enum": [
-                  "no-status",
+                  "no_status",
                   "info",
                   "warning",
                   "danger",
                   "success",
-                  "is-done"
+                  "is_done"
                 ]
               },
               "description": {
@@ -185,7 +186,8 @@
           "label",
           "priority",
           "tg_chat_id",
-          "namespace"
+          "namespace",
+          "status"
         ],
         "properties": {
           "label": {
@@ -205,12 +207,12 @@
           "status": {
             "type": "string",
             "enum": [
-              "no-status",
+              "no_status",
               "info",
               "warning",
               "danger",
               "success",
-              "is-done"
+              "is_done"
             ]
           },
           "description": {

@@ -394,9 +394,9 @@ export interface ApiTodoTodo extends Schema.CollectionType {
         maxLength: 200;
       }>;
     status: Attribute.Enumeration<
-      ['no-status', 'info', 'warning', 'danger', 'success', 'is-done']
+      ['no_status', 'info', 'warning', 'danger', 'success', 'is_done']
     > &
-      Attribute.DefaultTo<'no-status'>;
+      Attribute.Required;
     description: Attribute.Text &
       Attribute.SetMinMaxLength<{
         maxLength: 1000;

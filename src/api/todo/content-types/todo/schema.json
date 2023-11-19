@@ -37,14 +37,14 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "no-status",
+        "no_status",
         "info",
         "warning",
         "danger",
         "success",
-        "is-done"
+        "is_done"
       ],
-      "default": "no-status"
+      "required": true
     },
     "description": {
       "type": "text",
